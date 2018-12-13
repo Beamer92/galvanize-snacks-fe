@@ -1,0 +1,24 @@
+{
+  "name": "galvanize-snacks-fe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify js/main.js -o bundle.js",
+    "watch": "watchify js/main.js -o bundle.js",
+    "dev-server": "live-server .",
+    "dev": "run-all \"npm run watch\" \"npm run dev-server\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^16.2.3",
+    "live-server": "^1.2.1",
+    "run-all": "^1.0.1",
+    "watchify": "^3.11.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
