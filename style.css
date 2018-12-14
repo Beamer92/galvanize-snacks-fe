@@ -1,0 +1,24 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body.main-back{
+    background: linear-gradient(45deg, rgb(87, 148, 74), rgb(95, 95, 158)), url('https://wallpapercave.com/wp/mGD11sD.jpg');
+    background-blend-mode: screen;
+}
+
+nav.navbar{
+    background-color: rgb(101, 109, 153);
+    /* min-height: 4em; */
+}
+
+nav h1.title, a{
+    color: white;
+    margin: .5em;
+}
+
+.login {
+    display:flex;
+    align-items: center;
+}
