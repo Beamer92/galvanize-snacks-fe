@@ -10,7 +10,6 @@ body.main-back{
 
 nav.navbar{
     background-color: rgb(101, 109, 153);
-    /* min-height: 4em; */
 }
 
 nav h1.title, a{
@@ -18,7 +17,6 @@ nav h1.title, a{
     margin: .5em;
 }
 
-.login {
-    display:flex;
-    align-items: center;
+div.columns {
+    height: 100%;
 }
