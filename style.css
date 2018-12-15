@@ -3,10 +3,16 @@ html, body {
     height: 100%;
 }
 
-body.main-back{
-    background: linear-gradient(45deg, rgb(87, 148, 74), rgb(95, 95, 158)), url('https://wallpapercave.com/wp/mGD11sD.jpg');
+.main-back{
+    background: linear-gradient(45deg, rgb(55, 105, 44), rgb(55, 55, 105)), url('https://wallpapercave.com/wp/mGD11sD.jpg');
     background-blend-mode: screen;
 }
+
+#loginbox .title, #loginbox .subtitle{
+    text-shadow: 0 2px 5px black;
+    font-weight: bold;
+}
+
 
 nav.navbar{
     background-color: rgb(101, 109, 153);
@@ -19,4 +25,9 @@ nav h1.title, a{
 
 div.columns {
     height: 100%;
+}
+
+.btnsub {
+    color:green;
+    justify-content: space-between;
 }
