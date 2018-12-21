@@ -21,26 +21,26 @@
                     <div class="column is-4 is-offset-4" id=loginbox>
                         <h3 class="title has-text-white">Sign Up!</h3>
                         <div class="box">
-                            <form>
+                            <form id='signForm'>
                                 <div class="field">
                                     <div class="control">
-                                        <input class="input is-large" type="email" placeholder="Your Email" autofocus="">
+                                        <input id='emailSign' class="input is-large" type="email" placeholder="Your Email" autofocus="" required/>
                                     </div>
                                 </div>
                                 <div class="field">
                                         <div class="control">
-                                            <input class="input is-large" type="text" placeholder="First Name" autofocus="">
+                                            <input id='fname' class="input is-large" type="text" placeholder="First Name" autofocus="" required />
                                         </div>
                                     </div>
                                     <div class="field">
                                             <div class="control">
-                                                <input class="input is-large" type="text" placeholder="Last Name" autofocus="">
+                                                <input id='lname' class="input is-large" type="text" placeholder="Last Name" autofocus="" required/>
                                             </div>
                                         </div>
     
                                 <div class="field">
                                     <div class="control has-icons-right">
-                                        <input class="input is-large" type="password" placeholder="Password" id='pw'>
+                                        <input class="input is-large" type="password" placeholder="Password" id='pw' required/>
                                         <span class="icon is-small is-right">
                                             <i class="fas fa-check"></i>
                                         </span>
@@ -48,20 +48,19 @@
                                 </div>
                                 <div class="field">
                                         <div class="control has-icons-right">
-                                            <input class="input is-large" type="password" placeholder="Verify Password" id='verifypw'>
+                                            <input class="input is-large" type="password" placeholder="Verify Password" id='verifypw' required/>
                                             <span class="icon is-small is-right">
                                                 <i class="fas fa-check"></i>
                                             </span>
                                         </div>
                                     </div>
-                                <button class="button is-block is-info is-large is-fullwidth">Submit</button>
+                                <input type='submit' id='signupSubmit' value='Start Snacking!' class="button is-block is-info is-large is-fullwidth"/>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <script async type="text/javascript" src="../js/bulma.js"></script>
-   
+        <!-- <script async type="text/javascript" src="../js/bulma.js"></script> -->
 </body>
 </html>

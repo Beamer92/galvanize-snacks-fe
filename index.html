@@ -16,42 +16,6 @@
       
     </nav>
 
-
-    <!-- <div class="columns is-mobile is-centered is-desktop is-vcentered">
-        <div class="column is-half">
-            <div class="field">
-                <p class="control has-icons-left has-icons-right">
-                <input class="input" type="email" placeholder="Email">
-                <span class="icon is-small is-left">
-                    <i class="fas fa-envelope"></i>
-                </span>
-                <span class="icon is-small is-right">
-                    <i class="fas fa-check"></i>
-                </span>
-                </p>
-            </div>
-            <div class="field">
-                <p class="control has-icons-left">
-                <input class="input" type="password" placeholder="Password">
-                <span class="icon is-small is-left">
-                    <i class="fas fa-lock"></i>
-                </span>
-                </p>
-            </div>
-            <div class="field">
-                <p class="control">
-                <button class="button is-success">
-                    Login
-                </button>
-                </p>
-                <p class="control">
-                <button class="button is-success" id="signup">
-                    Sign Up!
-                </button>
-                </p>
-            </div>
-        </div>
-    </div> -->
    
     <section class="hero is-success is-fullheight">
         <div class="hero-body main-back ">
@@ -60,30 +24,30 @@
                     <h3 class="title has-text-white">Login</h3>
                     <p class="subtitle has-text-white">Please login to proceed.</p>
                     <div class="box">
-                        <form>
+                        <form id='userLogin'>
                             <div class="field">
                                 <div class="control">
-                                    <input class="input is-large" type="email" placeholder="Your Email" autofocus="">
+                                    <input class="input is-large" type="email" placeholder="Your Email" autofocus="" id='email'required/>
                                 </div>
                             </div>
 
                             <div class="field">
                                 <div class="control">
-                                    <input class="input is-large" type="password" placeholder="Your Password">
+                                    <input class="input is-large" type="password" placeholder="Your Password" id='password'required/>
                                 </div>
                             </div>
                             <div class="field">
                                 <label class="checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox"/>
                                 Remember me
                                 </label>
                             </div>
-                            <button class="button is-block is-info is-large is-fullwidth">Login</button>
+                            <input type='submit' value='Login' class="button is-block is-info is-large is-fullwidth"/>
                             <br>
                             <p class="">
                                     <a href="./signup.html">Sign Up</a> &nbsp;·&nbsp;
-                                    <a href="../">Forgot Password</a> &nbsp;·&nbsp;
-                                    <a href="../">Need Help?</a>
+                                    <a href="../" id='forgotPW'>Forgot Password</a> &nbsp;·&nbsp;
+                                    <a href="../" id='needHelp'>Need Help?</a>
                             </p>
                         </form>
                     </div>
@@ -91,6 +55,5 @@
             </div>
         </div>
     </section>
-    <script async type="text/javascript" src="../js/bulma.js"></script>
 </body>
 </html>
