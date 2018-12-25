@@ -31,3 +31,28 @@ div.columns {
     color:green;
     justify-content: space-between;
 }
+
+.banner {
+    margin-top: 1em;
+    background-image: url('https://stmed.net/sites/default/files/vegetables-wallpapers-28316-7272037.jpg');
+    height: 10em;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-size:100%;
+}
+
+.banner .reviews{
+    font-size: 40pt;
+    font-weight: 700;
+    text-shadow: 0 2px 5px black;
+}
+
+.justify-header{
+    justify-content: space-between;
+}
+
+.signout{
+    margin-top: 1em;
+    margin-right: 1em;
+}
