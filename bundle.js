@@ -1655,12 +1655,32 @@ process.chdir = function (dir) {
 process.umask = function() { return 0; };
 
 },{}],29:[function(require,module,exports){
- function init() {
+const templates = require('./templates')
+const {request} = require('./utils')
+
+function getSnacks() {
+  request('/snacks')
+  .then(results => {
+    let snacks = results.data
+    generateCards(snacks)
+  })
+}
+
+function generateCards(snacks) {
+  const appliedTempaltes = snacks.map(snack => templates.popCards(snack)).join('/n')
+  console.log(snacks)
+  //Do column stuff here
+  // document.querySelector(".main-body").innerHTML = appliedTemplates;
+}
+
+function init() {
+  getSnacks()
+
 
  }
 
  module.exports = {init}
-},{}],30:[function(require,module,exports){
+},{"./templates":32,"./utils":33}],30:[function(require,module,exports){
 const {authReq} = require('./utils')
 
 function init() {
@@ -1699,7 +1719,7 @@ function init() {
 }
 
 module.exports = {init}
-},{"./utils":32}],31:[function(require,module,exports){
+},{"./utils":33}],31:[function(require,module,exports){
 const {request, authReq} = require('./utils')
 
 function init() {
@@ -1762,7 +1782,35 @@ function verifyPass() {
 }
 
 module.exports = {init}
-},{"./utils":32}],32:[function(require,module,exports){
+},{"./utils":33}],32:[function(require,module,exports){
+const popCards = (snack) => {
+  return `<div class="card" id=${snack.id}>
+  <div class="card-image">
+    <figure class="image is-4by3">
+      <img src=${snack.img} alt="Placeholder image">
+    </figure>
+  </div>
+  <div class="card-content">
+    <div class="media">
+      <div class="media-content">
+        <p class="title is-4">${snack.name}</p>
+      </div>
+    </div>
+    <div class="content">
+     ${snack.description}
+     <h5>${snack.price}</h5>
+      <br>
+      <footer class="card-footer">
+          <a href="#" class="card-footer-item">View Reviews</a>
+      </footer>
+    </div>
+  </div>
+</div>
+`
+}
+
+module.exports = {popCards}
+},{}],33:[function(require,module,exports){
 const axios = require('axios')
 
 const environment = window.location.hostname === '127.0.0.1' ? 'http://localhost:3000' : 'https://something.herokuapp.com'
